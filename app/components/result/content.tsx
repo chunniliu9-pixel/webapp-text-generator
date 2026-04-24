@@ -20,10 +20,8 @@ const Result: FC<IResultProps> = ({
     <div className='basis-3/4 h-max'>
       <Header result={content} showFeedback={showFeedback} feedback={feedback} onFeedback={onFeedback} />
       <div
+        id="pdf-content"
         className='mt-4 w-full flex text-sm leading-5 overflow-scroll font-normal text-gray-900'
-        style={{
-          maxHeight: '70vh',
-        }}
         dangerouslySetInnerHTML={{
           __html: format(content),
         }}
